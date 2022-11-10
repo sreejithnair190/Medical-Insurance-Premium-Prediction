@@ -1,0 +1,62 @@
+{% extends 'home/base.html' %}
+{% block title %}
+    Result
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h3 class="title"><strong>Predicted Result</strong></h3>
+    <table class="table table-success table-striped">
+        <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Name</th>
+                <td>{{name}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Age</th>
+                <td>{{age}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Diabetes</th>
+                <td>{{diabetes}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Transplants</th>
+                <td>{{transplants}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Blood Pressure Problems</th>
+                <td>{{bloodPressureProblems}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Height</th>
+                <td>{{height}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Weight</th>
+                <td>{{weight}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Allergies</th>
+                <td>{{allergies}}</td>
+              </tr>
+              <tr>
+                <th scope="row">History Of Cancer In Family</th>
+                <td>{{cancerInFamily}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Surgeries</th>
+                <td>{{surgeries}}</td>
+              </tr>
+              <tr>
+                <th scope="row">Premium</th>
+                <td>{{premium}}</td>
+              </tr>
+            </tbody>
+          </table>
+  </table>
+  <a href="{% url 'home' %}" class="custom-button">
+    <button type="button" class="btn btn-success btn-md" >Predict New Result</button>
+  </a>
+</div>
+{% endblock %}

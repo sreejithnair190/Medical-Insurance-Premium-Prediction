@@ -1,0 +1,76 @@
+{% extends 'home/base.html' %}
+{% block title %}
+    Medical Insurance Prediction 
+{% endblock %}
+{% block content %}
+<div class="registration-form">
+        <form action="result" method="post" id="form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-control item" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label>Age</label>
+                <input type="number" class="form-control item" name="Age" id="Age" value="0" placeholder="Enter your age" required>
+            </div>
+            <div class="form-group">
+                <label>Diabetes</label>
+                <select class="form-control item" name="Diabetes">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Blood Pressure</label>
+                <select class="form-control item" name="BloodPressureProblems">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Any Organ Transplants</label>
+                <select class="form-control item" name="AnyTransplants">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Any Chronic Diseases</label>
+                <select class="form-control item" name="AnyChronicDiseases">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Height</label>
+                <input type="number" class="form-control item" value="0" name="Height" id="Height" placeholder="Enter your height in cms" required>
+            </div>
+            <div class="form-group">
+                <label>Weight</label>
+                <input type="number" class="form-control item" value="0" name="Weight" id="Height" placeholder="Enter your Weight in kgs" required>
+            </div>
+            <div class="form-group">
+                <label>Known Allergies</label>
+                <select class="form-control item" name="KnownAllergies">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>History Of Cancer In Family</label>
+                <select class="form-control item" name="HistoryOfCancerInFamily">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Number of major surgeries</label>
+                <input type="number" class="form-control item" name="NumberOfMajorSurgeries" id="NumberOfMajorSurgeries" value="0" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-success predict">Predict</button>
+            </div>
+        </form>
+    </div>  
+{% endblock %}
